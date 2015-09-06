@@ -3,7 +3,7 @@ require('definition')
 
 describe(Definition) do
   before() do
-    # Definition.clear()
+    Definition.clear()
   end
 
   describe('description') do

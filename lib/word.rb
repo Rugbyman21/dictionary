@@ -4,10 +4,8 @@ class Word
   @@words = []
 
   define_method(:initialize) do |attribute|
-      @name = attribute.fetch(:name)
-      # @vocab = []
-      @id = @@words.length().+(1)
-
+    @name = attribute.fetch(:name)
+    @id = @@words.length().+(1)
   end
 
   define_singleton_method(:all) do
