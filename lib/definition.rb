@@ -20,4 +20,13 @@ class Definition
     @@definitions = []
   end
 
+  define_singleton_method(:find) do |id|
+    found_definitions = nil
+    @@definitions.each() do |definition|
+      if definition.id().eql?(id)
+        found_definitions = definition
+      end
+    end
+    found_definitions
+  end
 end

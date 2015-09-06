@@ -35,6 +35,16 @@ describe(Definition) do
     end
   end
 
+  describe(".find") do
+    it("returns  the definiton by its id number") do
+      test_definitions = Definition.new({:description =>"it is a vehicle", :id => "1"})
+      test_definitions.save()
+      test_definitions2 = Definition.new({:description =>"it is a cup", :id => "2"})
+      test_definitions2.save()
+      expect(Definition.find(test_definitions.id())).to(eq(test_definitions))
+    end
+  end
+
 
 
 
