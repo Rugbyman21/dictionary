@@ -2,9 +2,9 @@ require('rspec')
 require('definition')
 
 describe(Definition) do
-#   before() do
-#     Definition.clear()
-#   end
+  before() do
+    # Definition.clear()
+  end
 
   describe('description') do
     it("returns definitions of the word") do
@@ -24,6 +24,14 @@ describe(Definition) do
       test_definitions = Definition.new({:description => 'it is a vehicle', :id =>1})
       test_definitions.save()
       expect(Definition.all()).to(eq([test_definitions]))
+    end
+  end
+
+  describe('.clear') do
+    it("empties out all of the definition") do
+      Definition.new({:description => "it is a vehicle", :id => "1"}).save()
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
     end
   end
 
