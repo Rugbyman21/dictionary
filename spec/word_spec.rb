@@ -20,6 +20,20 @@ require('word')
     end
   end
 
+  describe('.all') do
+    it("is empty at first") do
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
+  # describe('.clear') do
+  #   it("empties out all of the saved words") do
+  #     Word.new({:name => "car", :id => "1"}).save()
+  #     Word.clear()
+  #     expect(Word.all()).to(eq([]))
+  #   end
+  # end
+
 
 
 
