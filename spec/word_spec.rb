@@ -34,13 +34,13 @@ describe(Word) do
     end
   end
 
-  # describe('.clear') do
-  #   it("empties out all of the saved words") do
-  #     Word.new({:name => "car", :id => "1"}).save()
-  #     Word.clear()
-  #     expect(Word.all()).to(eq([]))
-  #   end
-  # end
+  describe('.clear') do
+    it("empties out all of the saved words") do
+      Word.new({:name => "car", :id => "1"}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
 
 
 
