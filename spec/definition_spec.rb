@@ -19,12 +19,13 @@ describe(Definition) do
     end
   end
 
-  # describe('#save') do
-  #   it("saves a definiton to the array.") do
-  #     test_definitions = Definition.new({:description => 'it is a vehicle', :id =>1})
-  #     expect(Definition.all()).to(eq([test_definitions]))
-  #   end
-  # end
+  describe('#save') do
+    it("saves a definiton to the array.") do
+      test_definitions = Definition.new({:description => 'it is a vehicle', :id =>1})
+      test_definitions.save()
+      expect(Definition.all()).to(eq([test_definitions]))
+    end
+  end
 
 
 
