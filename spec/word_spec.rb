@@ -1,10 +1,10 @@
 require('rspec')
 require('word')
 
-# describe(Word) do
-#   before() do
-#     Word.clear()
-#   end
+describe(Word) do
+  before() do
+    # Word.clear()
+  end
 
   describe('#name') do
     it("returns the name of the word") do
@@ -26,6 +26,14 @@ require('word')
     end
   end
 
+  describe('#save') do
+    it("adds a word to the array of saves the word") do
+      test_words = Word.new({:name => "car", :id => "1"})
+      test_words.save()
+      expect(Word.all()).to(eq([test_words]))
+    end
+  end
+
   # describe('.clear') do
   #   it("empties out all of the saved words") do
   #     Word.new({:name => "car", :id => "1"}).save()
@@ -38,4 +46,4 @@ require('word')
 
 
 
-# end
+end
