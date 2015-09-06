@@ -3,7 +3,7 @@ require('word')
 
 describe(Word) do
   before() do
-    # Word.clear()
+    Word.clear()
   end
 
   describe('#name') do
@@ -39,6 +39,16 @@ describe(Word) do
       Word.new({:name => "car", :id => "1"}).save()
       Word.clear()
       expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe('.find') do
+    it("return words by its id number") do
+      test_words = Word.new({:name => "cars", :id => "1"})
+      test_words.save()
+      test_words2 = Word.new({:name => "cup", :id =>"2"})
+      test_words.save()
+      expect(Word.find(test_words.id())).to(eq(test_words))
     end
   end
 
