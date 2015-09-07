@@ -1,35 +1,35 @@
 <center>
-  <h1>The <font color="#E64848">Dictionary</font></h1>
-  <h3>
-  Welcome :: This is a simple dictionary app
+ <h1>The <font color="#E64848">Dictionary</font></h1>
+ <h3>
+ Welcome :: This is a simple dictionary app
 </h3>
-  <br>
-  <b>First:</b>
-   Enter a word.
-  <br>
-  <b>Second:</b>
-  After submitting, click on the word to then add a definition!
-  <br>
-  <b>Third:</b>
-   Admire!
-  <br>
-  <br>
-  <br>
-<form action="/new_word" method="post">
+ <br>
+ <b>First:</b>
+  Enter a word.
+ <br>
+ <b>Second:</b>
+ After submitting, click on the word to then add a definition!
+ <br>
+ <b>Third:</b>
+  Admire!
+ <br>
+ <br>
+ <br>
+ <form action="/new_word" method="post">
   <div class="form-group">
-    <label for "word_input">Enter your word here:</label>
-    <input id="word_input" name="word_input" class="form control" type="text" placeholder="Jedi">
+    <label for="word_input">Enter your word here:</label>
+    <input id="word_input" name="word_input" class="form control" type="text" placeholder="i.e. Jedi">
   </div>
-  <br>
+  <!-- <br>
   <button type="submit" class="btn-success">Add Word</button>
-</form>
-<br>
-<br>
-</center>
-<hr>
-Here is the total list of words in this dictionary:
-<ul>
+  </form>
+  <br>
+  <br>
+  </center>
+  <hr>
+  Here is the total list of words in this dictionary:
+  <ul>
   <% @word.each() do |word| %>
   <li><a href="/details/<%= word.id() %>"><%= word.name() %></a></li>
   <% end %>
-</ul>
+  </ul> -->
