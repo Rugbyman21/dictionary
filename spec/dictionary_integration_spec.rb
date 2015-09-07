@@ -8,6 +8,6 @@ describe('the definition path', {:type => :feature}) do
   visit('/')
   fill_in('word_input', :with => 'car')
   click_button('Add Word')
-#   expect(page).to have_content('Word has been submitted.')
+  expect(page).to have_content('Word has been submitted.')
   end
 end

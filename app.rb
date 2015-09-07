@@ -17,11 +17,11 @@ post('/new_word') do
   erb(:success)
 end
 
-# get('/details/:id') do
-#   @word = Word.find(params.fetch('id').to_i())
-#   erb(:details)
-# end
-#
+get('/details/:id') do
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:details)
+end
+
 # post ("/details/:id") do
 #   @definition = Definition.new(params.fetch('definition_input'))
 #   @definition.save()
