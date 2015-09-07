@@ -1,0 +1,16 @@
+<h2><%= @word.name() %></h2>
+<ol>
+  <% @word.definitions.each() do |definition| %>
+  <li><%= definition.description() %></li>
+  <% end %>
+
+<h3>Add a new definition to this word:</h3>
+  <form action="/details/:id" method="post">
+  <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
+  <label for="definition_input">Add a new definition:</label>
+  <input id="definition_input" name="definition_input" type="text" placeholder="Put new definition here.">
+  <button type= "submit">Add</button>
+</form>
+
+
+<p><a href="/" >Return to The Dictionary</a></p>
