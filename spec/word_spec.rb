@@ -43,15 +43,6 @@ describe(Word) do
     end
   end
 
-  describe('#add_definition') do
-    it('adds a new definition to a submitted word') do
-      test_word = Word.new({:word => "car"})
-      test_definitions = Definition.new({:description => "cute and cuddly feline"})
-      test_word.add_definition(test_definitions)
-      expect(test_word.definitions()).to(eq([test_definitions]))
-    end
-  end
-
   describe('.find') do
     it("return words by its id number") do
       test_words = Word.new({:word => "cars", :id => "1"})

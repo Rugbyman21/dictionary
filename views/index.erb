@@ -1,7 +1,7 @@
-<center>
+<!-- <center> -->
  <h1>The <font color="#E64848">Dictionary</font></h1>
  <h3>
- Welcome :: This is a simple dictionary app
+ Welcome to the Dictionary app : Where definitions have no bounds and the word is your oyster
 </h3>
  <br>
  <b>First:</b>
@@ -21,15 +21,15 @@
     <input id="word_input" name="word_input" class="form control" type="text" placeholder="i.e. Jedi">
   </div>
   <br>
-  <button type="submit" class="btn-success">Add Word</button>
+  <button type="submit" class="btn-primary">Wingardium Leviosa</button>
   </form>
   <br>
   <br>
-  </center>
+  <!-- </center> -->
   <hr>
   Here is the total list of words in this dictionary:
-  <!-- <ul>
+  <ul>
   <% @word.each() do |word| %>
-  <li><a href="/details/<%= word.id() %>"><%= word.name() %></a></li>
+  <li><a href="/details/<%= word.id() %>"><%= word.word() %></a></li>
   <% end %>
-  </ul>  -->
+  </ul>
